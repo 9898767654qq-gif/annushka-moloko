@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Аннушка. Молоко с веток</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="ornament"></div>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1 class="brand">Аннушка. Молоко с веток</h1>
+        <p class="sub" id="dayline">День 1</p>
+      </div>
+      <div class="meters">
+        <div class="meter"><span>Зорька <b id="goatVal">55</b></span><div class="bar meter-goat"><i id="goatH"></i></div></div>
+        <div class="meter"><span>Ванечка <b id="babyVal">55</b></span><div class="bar baby"><i id="babyH"></i></div></div>
+        <div class="meter"><span id="joyCount">0/7 радостей</span></div>
+      </div>
+    </header>
+    <section class="grid">
+      <aside class="panel">
+        <h2>Лес и ветки</h2>
+        <p class="hint">Срежь ветки, потом положи их в ясли.</p>
+        <div id="spots"></div>
+        <h2>Корзина</h2>
+        <div id="inv"></div>
+      </aside>
+      <section class="panel yard">
+        <div class="house"></div>
+        <div class="yard-goat" id="goat"><svg viewBox="0 0 220 150"><ellipse class="body" cx="110" cy="95" rx="70" ry="36" fill="#f4efe6" stroke="#5a3a22" stroke-width="3"/><g class="head"><ellipse cx="48" cy="62" rx="28" ry="24" fill="#f7f1e6" stroke="#5a3a22" stroke-width="3"/><circle cx="40" cy="60" r="4" fill="#2b1a12"/><circle cx="54" cy="60" r="4" fill="#2b1a12"/></g></svg></div>
+        <div class="fence"></div>
+        <div class="manger-box"><div id="manger" class="chips"></div></div>
+      </section>
+      <aside class="panel">
+        <h2>Ванечка</h2>
+        <div class="baby-art" id="babyArt">🍼</div>
+        <p class="hint" id="babyStatus"></p>
+        <div class="cup" id="cup"></div>
+        <p class="hint" id="goatStatus"></p>
+        <div class="actions">
+          <button class="act primary" id="feedBtn">Покормить козу</button>
+          <button class="act" id="petBtn">Погладить</button>
+          <button class="act" id="milkBtn">Доить</button>
+          <button class="act good" id="babyBtn">Дать молоко</button>
+          <button class="act warn" id="sleepBtn">Лечь спать</button>
+        </div>
+      </aside>
+    </section>
+    <section class="log" id="log"></section>
+    <section class="panel" style="margin-top:14px">
+      <h2>Книжица Аннушки</h2>
+      <ol class="book-list" id="book"></ol>
+      <button class="act" id="resetBtn">Начать заново</button>
+    </section>
+  </main>
+  <div class="overlay hidden" id="milkGame"><div class="modal"><h2>Дойка</h2><p id="milkHint"></p><div class="rhythm"><div class="zone"></div><div class="needle" id="needle"></div></div><button class="act primary" id="squeeze">Струя</button><button class="act" id="closeMilk">Отменить</button></div></div>
+  <div class="overlay hidden" id="ending"><div class="modal"><h2 id="endTitle"></h2><p id="endText"></p><button class="act primary" id="againBtn">Ещё одну весну</button></div></div>
+  <script type="module" src="js/ui.js"></script>
+</body></html>
